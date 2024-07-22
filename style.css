@@ -1,0 +1,29 @@
+.hero-section {
+    background: url('cafe.jpg') no-repeat center center;
+    background-size: cover;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.hero-section p {
+    font-size: 1.25rem;
+}
+
+#menu .card {
+    margin-bottom: 50px;
+}
+
+#about {
+    background: #f8f9fa;
+}
+
+#contact .form-group {
+    margin-bottom: 1.5rem;
+}

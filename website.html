@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Café Delight</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <style>
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Café Delight</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Menu
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" data-toggle="collapse" href="#coffeeMenu" role="button" aria-expanded="false" aria-controls="coffeeMenu">Coffee</a>
+                        <a class="dropdown-item" data-toggle="collapse" href="#pastriesMenu" role="button" aria-expanded="false" aria-controls="pastriesMenu">Pastries</a>
+                        <a class="dropdown-item" data-toggle="collapse" href="#sandwichesMenu" role="button" aria-expanded="false" aria-controls="sandwichesMenu">Sandwiches</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <header class="hero-section text-center text-white">
+        <div class="container">
+            <h1>Welcome to Café Delight</h1>
+            <p>Your perfect spot for coffee and relaxation</p>
+        </div>
+    </header>
+    <section id="menu" class="py-5">
+        <div class="container">
+            <h2 class="text-center">Our Menu</h2>
+            <div class="collapse" id="coffeeMenu">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="espresso.jpg" class="card-img-top" alt="Coffee">
+                            <div class="card-body">
+                                <h5 class="card-title">Espresso</h5>
+                                <p class="card-text">Price: ₹120</p>
+                                <button class="btn btn-primary btn-sm" onclick="addToOrder('Espresso', 120)">Add to Order</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="coffee.jpg" class="card-img-top" alt="Coffee">
+                            <div class="card-body">
+                                <h5 class="card-title">Cappuccino</h5>
+                                <p class="card-text">Price: ₹150</p>
+                                <button class="btn btn-primary btn-sm" onclick="addToOrder('Cappuccino', 150)">Add to Order</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="latte.jpeg" class="card-img-top" alt="Coffee">
+                            <div class="card-body">
+                                <h5 class="card-title">Latte</h5>
+                                <p class="card-text">Price: ₹160</p>
+                                <button class="btn btn-primary btn-sm" onclick="addToOrder('Latte', 160)">Add to Order</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="collapse" id="pastriesMenu">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="croissant.jpeg" class="card-img-top" alt="Pastries">
+                            <div class="card-body">
+                                <h5 class="card-title">Croissant</h5>
+                                <p class="card-text">Price: ₹90</p>
+                                <button class="btn btn-primary btn-sm" onclick="addToOrder('Croissant', 90)">Add to Order</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="danish .jpeg" class="card-img-top" alt="Pastries">
+                            <div class="card-body">
+                                <h5 class="card-title">Danish Pastry</h5>
+                                <p class="card-text">Price: ₹100</p>
+                                <button class="btn btn-primary btn-sm" onclick="addToOrder('Danish Pastry', 100)">Add to Order</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="muffins.jpeg" class="card-img-top" alt="Pastries">
+                            <div class="card-body">
+                                <h5 class="card-title">Chocolate Muffin</h5>
+                                <p class="card-text">Price: ₹110</p>
+                                <button class="btn btn-primary btn-sm" onclick="addToOrder('Chocolate Muffin', 110)">Add to Order</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="collapse" id="sandwichesMenu">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="chicken.jpg" class="card-img-top" alt="Sandwiches">
+                            <div class="card-body">
+                                <h5 class="card-title">Chicken Sandwich</h5>
+                                <p class="card-text">Price: ₹180</p>
+                                <button class="btn btn-primary btn-sm" onclick="addToOrder('Chicken Sandwich', 180)">Add to Order</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="veg.jpeg" class="card-img-top" alt="Sandwiches">
+                            <div class="card-body">
+                                <h5 class="card-title">Vegetarian Sandwich</h5>
+                                <p class="card-text">Price: ₹160</p>
+                                <button class="btn btn-primary btn-sm" onclick="addToOrder('Vegetarian Sandwich', 160)">Add to Order</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="sandwiches.jpg" class="card-img-top" alt="Sandwiches">
+                            <div class="card-body">
+                                <h5 class="card-title">Ham and Cheese Sandwich</h5>
+                                <p class="card-text">Price: ₹170</p>
+                                <button class="btn btn-primary btn-sm" onclick="addToOrder('Ham and Cheese Sandwich', 170)">Add to Order</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="about" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center">About Us</h2>
+            <p class="text-center">Café Delight is a cozy spot in the heart of the city offering a wide range of coffee, pastries, and sandwiches. We pride ourselves on our friendly atmosphere and quality service.</p>
+        </div>
+    </section>
+    <section id="contact" class="py-5">
+        <div class="container">
+            <h2 class="text-center">Contact Us</h2>
+            <form>
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email address</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea class="form-control" id="message" rows="4" placeholder="Your message"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </section>
+    </section>
+    <section id="order-list" class="py-5">
+        <div class="container">
+            <h2 class="text-center">Your Order List</h2>
+            <ul id="order-items" class="list-group">
+            </ul>
+            <p class="text-center mt-3"><strong>Total Amount: ₹<span id="totalAmount">0</span></strong></p>
+            <button class="btn btn-success btn-block mt-3" onclick="submitOrder()">Submit Order</button>
+        </div>
+    </section>
+    <footer class="text-center py-4">
+        <p>&copy; 2024 Café Delight. All rights reserved.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        let orderList = [];
+        let totalAmount = 0;
+
+        function addToOrder(itemName, itemPrice) {
+            orderList.push({ name: itemName, price: itemPrice });
+            totalAmount += itemPrice;
+            updateOrderList();
+            alert(`${itemName} added to your order list.`);
+        }
+
+        function updateOrderList() {
+            const orderItemsElement = document.getElementById('order-items');
+            orderItemsElement.innerHTML = '';
+            orderList.forEach(item => {
+                const li = document.createElement('li');
+                li.classList.add('list-group-item');
+                li.innerHTML = `${item.name} - ₹${item.price}`;
+                orderItemsElement.appendChild(li);
+            });
+            document.getElementById('totalAmount').textContent = totalAmount;
+        }
+
+        function submitOrder() {
+            alert(`Order submitted! Total Amount: ₹${totalAmount}`);
+            orderList = [];
+            totalAmount = 0;
+            updateOrderList();
+        }
+    </script>
+</body>
+</html>
+
+
